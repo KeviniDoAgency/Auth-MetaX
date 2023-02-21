@@ -1,0 +1,140 @@
+:root {
+  --primary: #6465b3;
+  --second: #7181c4;
+  --third: #7c6dc2;
+  --white: #ffffff;
+  --tw-bg-opacity: 1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  margin-bottom: 100px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+[class*="contenedor"],
+main {
+  width: min(95%, 120rem);
+  margin: 1rem auto;
+}
+
+#root [data-amplify-authenticator] {
+  all: unset;
+}
+
+.header {
+  width: 100%;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  background-color: var(--white);
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navegation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navegation button {
+  border: none;
+  outline: none !important;
+  box-shadow: none;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition-duration: 0.6s;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: initial;
+}
+
+.navegation button:focus{
+    color: var(--primary);
+}
+
+.navegation button:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: initial;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.init-Meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.auth-wrapper .amplify-tabs-item {
+  color: var(--primary);
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.auth-wrapper .amplify-tabs-item:hover {
+  color: var(--second);
+}
+
+.auth-wrapper .amplify-tabs-item[data-state="active"] {
+  color: var(--white);
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.auth-wrapper .amplify-button--primary {
+  background-color: var(--primary);
+}
+.auth-wrapper .amplify-button--primary:hover {
+  background-color: var(--second);
+}
+
+.auth-wrapper .amplify-button--link {
+  color: var(--primary);
+}
+
+.auth-wrapper [data-amplify-authenticator] [data-amplify-router] {
+  border: none;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+  background-color: var(--white);
+}
+
+.auth-wrapper [data-indicator-position="top"] > .amplify-tabs-item {
+  border: none;
+}
+.amplify-button:focus,
+.amplify-button:active {
+  box-shadow: none;
+  background-color: transparent;
+}

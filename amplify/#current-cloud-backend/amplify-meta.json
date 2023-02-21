@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-authmetaxv2-dev-150558-authRole",
+      "UnauthRoleArn": "arn:aws:iam::716917988872:role/amplify-authmetaxv2-dev-150558-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::716917988872:role/amplify-authmetaxv2-dev-150558-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-authmetaxv2-dev-150558-deployment",
+      "UnauthRoleName": "amplify-authmetaxv2-dev-150558-unauthRole",
+      "StackName": "amplify-authmetaxv2-dev-150558",
+      "StackId": "arn:aws:cloudformation:us-east-1:716917988872:stack/amplify-authmetaxv2-dev-150558/65b97960-a33d-11ed-bb4a-0a91e4c1fd73",
+      "AmplifyAppId": "d2uaz23bswhmga"
+    }
+  },
+  "auth": {
+    "authmetaxv2200ca335": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authmetaxv2-dev-150558-deployment/amplify-cfn-templates/auth/authmetaxv2200ca335-cloudformation-template.json",
+        "logicalId": "authauthmetaxv2200ca335"
+      },
+      "lastPushTimeStamp": "2023-02-02T21:10:46.558Z",
+      "output": {
+        "UserPoolId": "us-east-1_O0100oKgV",
+        "AppClientIDWeb": "4dbajrnkpeqo3g7jj0sd8rq97m",
+        "AppClientID": "260c1an56ousqmvqn1ijjj0771",
+        "IdentityPoolId": "us-east-1:23017a75-f12e-4b70-bd3c-f7810b465c45",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:716917988872:userpool/us-east-1_O0100oKgV",
+        "IdentityPoolName": "authmetaxv2200ca335_identitypool_200ca335__dev",
+        "UserPoolName": "authmetaxv2200ca335_userpool_200ca335"
+      },
+      "lastPushDirHash": "LwiYsv2iGkT6y+r0c+I/Pt4dJec="
+    }
+  }
+}
