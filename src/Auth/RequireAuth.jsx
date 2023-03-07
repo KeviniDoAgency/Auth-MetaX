@@ -5,6 +5,7 @@ import routes from "../Routes";
 export function RequireAuth({ children }) {
   const location = useLocation();
   const { route, user } = useAuthenticator((context) => [context.route, context.user]);
+  console.log(route);
   if (route !== "authenticated") {
     return <Navigate to={routes.Login.path} state={{ from: location }} replace />;
   }

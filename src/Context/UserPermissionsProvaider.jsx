@@ -14,7 +14,7 @@ const UserPermissionsProvaider = ({ children }) => {
       setLoading(true)
       const {pool: { clientId, userPoolId },signInUserSession: { idToken },username,} = user;
 
-      const URL = `https://3q5x11oei7.execute-api.us-east-1.amazonaws.com/prod/permissionByUser/${username}`;
+      const URL = `https://3q5x11oei7.execute-api.us-east-1.amazonaws.com/prod/permissionByUser`;
       const data = JSON.stringify([
         {
           isAdmin: false,
@@ -22,7 +22,7 @@ const UserPermissionsProvaider = ({ children }) => {
       ]);
 
       let config = {
-        method: 'put',
+        method: 'post',
         url: URL,
         headers:{
           userPoolId,
