@@ -20,19 +20,37 @@ export const ProtectedFirst = () => {
     });
   };
   return (
-    <div className="div">
-      <p> clientId = {user?.pool?.clientId}</p>
-      <p>userPoolId = {user?.pool?.userPoolId}</p>
-      <p>
+    <div className="bg-white p-8 rounded-md shadow-lg flex flex-col gap-2 min-w-[1000px]">
+      <code className="text-black font-bold text-[28px] flex items-center gap-4">
         {" "}
-        tokenUse = {user?.signInUserSession?.accessToken?.payload?.token_use}
-      </p>
-      <p> Token:</p>
-      <p className="token" ref={textToCopyRef}>
+        clientId = <code className="font-light">{user?.pool?.clientId}</code>
+      </code>
+      <code className="text-black font-bold text-[28px] flex items-center  gap-4">
+        userPoolId ={" "}
+        <code className="font-light">{user?.pool?.userPoolId}</code>
+      </code>
+      <code className="text-black font-bold text-[28px] flex items-center  gap-4">
+        tokenUse ={" "}
+        <code className="font-light">
+          {user?.signInUserSession?.accessToken?.payload?.token_use}
+        </code>
+      </code>
+      <code className="text-black font-bold text-[28px] flex items-center justify-between">
+        {" "}
+        Token:{" "}
+        <button
+          className="bg-[#6465b3] text-white p-1 text-[10px]"
+          onClick={handleCopy}
+        >
+          Copiar token
+        </button>
+      </code>
+
+      <p className="token border-[#7181c4] border p-8" ref={textToCopyRef}>
         {user?.signInUserSession?.accessToken?.jwtToken}
       </p>
-      <button onClick={handleCopy}>Copiar token</button>
-      {copied && <p>¡Texto copiado!</p>}
+
+      {copied && <p className="mt-2 font-bold">¡Texto copiado!</p>}
     </div>
   );
 };
