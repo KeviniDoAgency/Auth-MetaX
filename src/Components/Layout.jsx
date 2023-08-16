@@ -12,20 +12,19 @@ export function Layout() {
     context.signOut,
     context.user,
   ]);
-  const { userPermissions, addUserPermission, loading, setUserPermissions } = useUserPermissions();
-  console.log(user);
+  const { userPermissions, addUserPermission, loading, setUserPermissions } =
+    useUserPermissions();
   const navigate = useNavigate();
   function logOut() {
     signOut();
     navigate(routes.Login.path);
-    setUserPermissions([])
+    setUserPermissions([]);
   }
 
   useEffect(() => {
     const verifyRoles = async () => {
       try {
         if (user) {
-          console.log(user);
           await addUserPermission(user);
         }
       } catch (error) {
@@ -53,7 +52,7 @@ export function Layout() {
                 <Button onClick={() => navigate(routes.ProtectedSecond.path)}>
                   Second Protected Route
                 </Button>
-                {(userPermissions[0]?.isAdmin && user) && (
+                {userPermissions[0]?.isAdmin && user && (
                   <Button onClick={() => navigate(routes.Admin.path)}>
                     Admin
                   </Button>

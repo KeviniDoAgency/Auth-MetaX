@@ -40,7 +40,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-authmetaxv2-dev-150558-deployment/amplify-cfn-templates/auth/authmetaxv2200ca335-cloudformation-template.json",
         "logicalId": "authauthmetaxv2200ca335"
       },
-      "lastPushTimeStamp": "2023-02-02T21:10:46.558Z",
+      "lastPushTimeStamp": "2023-06-22T14:14:09.987Z",
       "output": {
         "UserPoolId": "us-east-1_O0100oKgV",
         "AppClientIDWeb": "4dbajrnkpeqo3g7jj0sd8rq97m",

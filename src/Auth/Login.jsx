@@ -23,17 +23,14 @@ export function Login() {
         placeholder: 'Enter your Last Name',
         order: 2
       },
-      username: {
+      email: {
         order: 3
       },
-      email: {
-        order: 4  
-      },
       password: {
-        order: 5
+        order: 4
       },
       confirm_password: {
-        order: 6
+        order: 5
       }
     },
    }
@@ -55,6 +52,7 @@ export function Login() {
         socialProviders={["apple", "facebook", "google"]}
         signUpAttributes={["name", "family_name"]}
         formFields={formFields}
+        loginMechanisms={['email']}
       ></Authenticator>
     </View>
   );
